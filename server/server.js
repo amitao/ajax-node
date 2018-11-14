@@ -1,4 +1,5 @@
 // bring express in from node modules
+// syntax: const moduleName = require('moduleName');
 // syntax: require('strings')
 const express = require('express');
 const getQuote = require('./modules/quotes.module');
@@ -10,7 +11,7 @@ const app = express();
 const PORT = 5000;
 
 
-
+app.use(express.static('server/public'));
 // get syntax: get('route', function callback)
 // function callback syntax: function(request, respond){}
 // per request one respond back
